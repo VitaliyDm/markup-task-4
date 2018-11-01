@@ -1,0 +1,85 @@
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: sans-serif;
+    background-color: #f6c390;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+header
+{
+    height: 30px;
+    padding: 10px 20px;
+}
+
+.toggle
+{
+    display: none;
+}
+
+.button-toggle
+{
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.toggle:checked ~ header .button-toggle
+{
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    writing-mode: tb-rl;
+    transition: .5s;
+}
+
+.toggle:checked ~ main .full-info
+{
+    display: block;
+}
+
+.toggle:checked ~ main .info-block
+{
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.toggle:checked ~ main .short-info
+{
+    display: none;
+}
+
+.info-block
+{
+    display: inline-block;
+    height: 300px;
+    width: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    vertical-align: middle;
+}
+
+.info-block > img
+{
+    width: 240px;
+}
+
+.full-info
+{
+    display: none;
+}
